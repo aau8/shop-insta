@@ -1,0 +1,102 @@
+/* Подключение шрифтов */
+h1,h2 {
+  font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
+}
+p, a {
+  font-family: 'Segoe UI Regular', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+body {
+  display: flex;
+  background-color: #F5F6F7;
+}
+.card {
+  width: 360px;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #00BCD4;
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px rgba(66, 72, 90, 0.5);
+}
+.card__content {
+  padding: 60px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+h2 {
+  font-size: 18px;
+  color: #42485A;
+}
+p {
+  font-size: 13px;
+  color: #ffffff;
+  margin-bottom: 13px;
+}
+.profile {
+  max-width: 328px;
+  height: 164px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0px 4px 10px rgba(66, 72, 90, 0.5);
+}
+.profile p {
+  color: #42485A;
+  margin-bottom: 0;
+}
+.profile__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+.profile__name {
+  margin-left: 20px;
+}
+.profile__social-networks {
+  display: flex;
+  justify-content: space-between;
+}
+.profile__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 10px);
+  height: 44px;
+  border-radius: 2px;
+}
+@media screen and (max-width:361px) {
+  .card {
+    max-width: 320px;
+  }
+}
+.whatsapp {
+  background-color: #25D366;
+}
+.telegram {
+  background-color: #2FC6F6;
+}
+/* .profile__social img {
+  padding: 12px 63px 12px 63px;
+} */
+.signature {
+  height: 280px;
+  display: flex;
+  padding: 16px;
+}
+.signature a{
+  text-decoration: none;
+  margin: auto auto 0;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+}
