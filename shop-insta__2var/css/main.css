@@ -30,10 +30,10 @@ p, a, h3, li, span {
 
 html {
   height: 100vh;
+  background-color: #FBFBFB;
 }
 body {
   /* display: flex; */
-  background-color: #FBFBFB;
 }
 h1 {
   font-size: 20px;
@@ -62,4 +62,8 @@ ol {
 }
 li {
   font-size: 13px;
+}
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
 }
