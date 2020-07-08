@@ -32,7 +32,7 @@ html {
   outline: none;
   height: 100vh;
   background-color: #FBFBFB;
-  -webkit-tap-highlight-color:  transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
   /* display: flex; */
