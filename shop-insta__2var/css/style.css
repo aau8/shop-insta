@@ -1,0 +1,274 @@
+/* Стили для всей карточки */
+.card {
+  max-width: 360px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  position: relative;
+  opacity: 1;
+  transition: 0.3s;
+}
+.card-active {
+  opacity: 0;
+}
+/* Конец стилей для всей карточки */
+/* Стили для первого блока с инфой о специалисте */
+.profile, .info {
+  max-width: 360px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0px 4px 10px rgba(66, 72, 90, 0.5);
+}
+.profile p {  
+  color: #42485A;
+  margin-bottom: 0;
+}
+.profile__name p {
+  color: #E73C3C;
+}
+.profile__info {
+  display: flex;
+  align-items: center;
+  padding: 12px 89px 12px 12px;
+  margin-bottom: 13px;
+  border: 1px solid rgba(66, 72, 90, 0.15);
+  border-radius: 10px;
+}
+.profile__info__img {
+  width: 70px;
+  height: 70px;
+}
+.profile__info__img img {
+  width: 100%;
+  height: 100%;
+}
+.profile__name {
+  margin-left: 20px;
+}
+.profile__social-networks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.profile__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 10px);
+  height: 44px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.whatsapp {
+  background-color: #25D366;
+}
+.vk {
+  background-color: #4A76A8;
+}
+.telegram {
+  background-color: #2FC6F6;
+  width: calc(100% - 10px);
+}
+/* Стили для первого блока с инфой о специалисте */
+/* Стили для второго блока с инфой о его деятельности */
+.info {
+  margin-top: 20px;
+  padding: 20px;
+}
+.info__whatido {
+  margin-bottom: 20px;
+}
+.info__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 320px;
+  height: 50px;
+  padding: 12px 15px;
+  border: 0.5px solid #DEDEDE;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.info__card__title {
+  display: flex;
+  align-items: center;
+}
+.info__card__title h3{
+  margin-left: 13px;
+}
+.info__session ol li{
+  margin-bottom: 5px;
+}
+/* Конец стилей для второго блока с инфой о его деятельности */
+
+/* Стили для карточки с проблемой */
+/* Стили для верхней части */
+.card-problem-bg {
+  width: 100%;
+  height: 100vh;
+  /* background-color: #fff; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  transform: translateX(100%);
+  transition: 0.3s;
+}
+.card-problem-bg-active {
+  transform: translateX(0);
+}
+.card-problem {
+  max-width: 360px;
+  border-radius: 20px;
+  /* position: fixed;
+  top: 50%;
+  left: 50%; */
+  /* margin-left: -180px;
+  margin-top: -282px; */
+  /* transform: translateX(120%); */
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.card-problem__content {
+  box-shadow: 0px 0px 15px rgba(66, 72, 90, 0.15);
+  border-radius: 20px;
+}
+.card-problem__top {
+  position: relative;
+}
+.card-problem-img {
+  max-width: 360px;
+}
+.card-problem-img img {
+  width: 100%;
+}
+.card-problem-icon {
+  position: absolute;
+}
+.share {
+  top: 10px;
+  left: 10px;
+}
+.close {
+  top: 10px;
+  right: 10px;
+}
+/* Конец стилей для верхней части */
+/* Стили для нижней части */
+.card-problem__bottom {
+  position: relative;
+  max-width: 360px;
+  margin-top: -16px;
+  padding: 15px;
+  border-radius: 20px 20px 5px 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(66, 72, 90, 0.15);
+  z-index: 2;
+}
+/* .card-problem-list {
+  margin-left: 9px;
+} */
+.card-problem-list ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  margin-bottom: 13px;
+}
+.card-problem-list ul li {
+  position: relative;
+  margin-bottom: 5px;
+  line-height: 1.3;
+  max-width: 160px;
+  padding-left: 9px;
+}
+.card-problem-list ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #E73C3C;
+  border-radius: 100%;
+}
+
+.accordion-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-link span {
+  font-size: 13px;
+  color: #E73C3C;
+}
+.accordion-link-img {
+  transition: 0.3s;
+  padding-left: 5px;
+}
+.accordion-link-img__active {
+  transform: rotate(90deg);
+}
+.acc-content {
+  padding-top: 10px;
+  display: none;
+}
+
+.sign-up {
+  margin-top: 20px;
+  max-width: 360px;
+  width: 100%;
+  height: 90px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(66, 72, 90, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign-up h2 {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+.sign-up a {
+  font-size: 15px;
+  color: #fff;
+  padding: 13px 33px;
+  margin-right: 10px;
+  background-color: #E73C3C;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(231, 60, 60, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+.signature {
+  display: flex;
+  padding: 16px;
+}
+.signature a{
+  margin: auto auto 0;
+  text-align: center;
+  color: #42485A;
+  font-size: 13px;
+}
+@media screen and (max-width:361px) {
+  .card {
+    max-width: 320px;
+  }
+}
