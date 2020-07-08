@@ -1,0 +1,65 @@
+/*Ссылка на шрифт Segoe UI Regular*/
+@font-face {
+  font-family: 'Segoe UI Regular';
+  src: url('../font/SegoeUI/SegoeUI.eot');
+  src: url('../font/SegoeUI/SegoeUI.eot?#iefix') format('embedded-opentype'),
+  url('../font/SegoeUI/SegoeUI.woff') format('woff'),
+  url('../font/SegoeUI/SegoeUI.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+/*Ссылка на шрифт Segoe UI Semibold*/
+@font-face {
+  font-family: 'Segoe UI Semibold';
+  src: url('../font/SegoeUI/SegoeUI-SemiBold.eot');
+  src: url('../font/SegoeUI/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../font/SegoeUI/SegoeUI-SemiBold.woff') format('woff'),
+  url('../font/SegoeUI/SegoeUI-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+/* Подключение шрифтов */
+h1,h2 {
+  font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
+}
+p, a, h3, li, span {
+  font-family: 'Segoe UI Regular', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+body {
+  display: flex;
+  background-color: #FBFBFB;
+}
+h1 {
+  font-size: 20px;
+  color: #42485A;
+  margin-bottom: 6px;
+}
+h2 {
+  font-size: 18px;
+  color: #42485A;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 14px;
+  color: #42485A;
+  font-weight: 300;
+}
+p {
+  font-size: 13px;
+  color: #42485A;
+  margin-bottom: 13px;
+}
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+li {
+  font-size: 13px;
+}
