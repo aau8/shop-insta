@@ -29,8 +29,10 @@ p, a, h3, li, span {
 }
 
 html {
+  outline: none;
   height: 100vh;
   background-color: #FBFBFB;
+  -webkit-tap-highlight-color:  transparent;
 }
 body {
   /* display: flex; */
