@@ -32,7 +32,7 @@ html {
   height: 100vh;
 }
 body {
-  display: flex;
+  /* display: flex; */
   background-color: #FBFBFB;
 }
 h1 {

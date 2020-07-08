@@ -10,7 +10,9 @@
   transition: 0.3s;
 }
 .card-active {
-  opacity: 0;
+  /* opacity: 0; */
+  display: none;
+  overflow: hidden;
 }
 /* Конец стилей для всей карточки */
 /* Стили для первого блока с инфой о специалисте */
@@ -19,7 +21,8 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 12px;
-  box-shadow: 0px 4px 10px rgba(66, 72, 90, 0.5);
+  box-shadow: 0px 0px 15px rgba(66, 72, 90, 0.15);
+  /* box-shadow: 0px 4px 10px rgba(66, 72, 90, 0.5); */
 }
 .profile p {  
   color: #42485A;
@@ -31,9 +34,10 @@
 .profile__info {
   display: flex;
   align-items: center;
-  padding: 12px 89px 12px 12px;
+  padding: 12px 0 12px 12px;
   margin-bottom: 13px;
-  border: 1px solid rgba(66, 72, 90, 0.15);
+  /* border: 1px solid rgba(66, 72, 90, 0.15); */
+  box-shadow: 0px 0px 15px rgba(66, 72, 90, 0.15);
   border-radius: 10px;
 }
 .profile__info__img {
@@ -121,10 +125,14 @@
 }
 .card-problem-bg-active {
   transform: translateX(0);
+  overflow-y: auto;
 }
 .card-problem {
   max-width: 360px;
-  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  display: none;
+  /* border-radius: 20px; */
   /* position: fixed;
   top: 50%;
   left: 50%; */
@@ -133,6 +141,10 @@
   /* transform: translateX(120%); */
   opacity: 1;
   transition: 0.3s;
+}
+.card-problem-active {
+  display: block;
+  /* overflow-y: auto; */
 }
 
 .card-problem__content {
@@ -268,7 +280,7 @@
   font-size: 13px;
 }
 @media screen and (max-width:361px) {
-  .card {
+  .card, .card-problem {
     max-width: 320px;
   }
 }

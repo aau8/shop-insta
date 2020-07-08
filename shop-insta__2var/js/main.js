@@ -17,14 +17,18 @@ $(function() {
   var problem = $('.card-problem-bg')
   var close = $('.close')
   var card = $('.card')
+  var cardProblem = $('.card-problem')
 
   family.click(function () {
     problem.toggleClass('card-problem-bg-active')
     card.toggleClass('card-active')
+    cardProblem.toggleClass('card-problem-active')
   })
   close.click(function () {
     problem.toggleClass('card-problem-bg-active')
     card.toggleClass('card-active')
+    cardProblem.toggleClass('card-problem-active')
+
   })
 })
 });
