@@ -130,7 +130,7 @@
 .card-problem {
   max-width: 360px;
   margin: auto;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: none;
   /* border-radius: 20px; */
   /* position: fixed;
@@ -143,7 +143,9 @@
   transition: 0.3s;
 }
 .card-problem-active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* overflow-y: auto; */
 }
 
@@ -280,7 +282,13 @@
   font-size: 13px;
 }
 @media screen and (max-width:361px) {
-  .card, .card-problem {
+  .card, .card-problem__bottom, .sign-up {
     max-width: 320px;
+  }
+  .sign-up h2 {
+    margin-left: 0;
+  }
+  .sign-up a {
+    margin-right: 0;
   }
 }
