@@ -16,29 +16,28 @@ $(function() {
   var family = $('#family');
   var personality = $('#personality');
   var work = $('#work');
-  var close = $('.close')
-  var card = $('.card')
-  var cardProblem = $('.card-problem')
-  var problemFamily = $('.problem-family')
-  var problemPersonality = $('.problem-personality')
-  var problemWork = $('.problem-work')
+  var close = $('.close');
+  var card = $('.card');
+  var cardProblem = $('.card-problem');
+  var problemFamily = $('.problem-family');
+  var problemPersonality = $('.problem-personality');
+  var problemWork = $('.problem-work');
 
   family.click(function () {
     card.toggleClass('card-active')
     problemFamily.toggleClass('card-problem-active')
-  })
+  });
   personality.click(function () {
     card.toggleClass('card-active')
     problemPersonality.toggleClass('card-problem-active')
-  })
+  });
   work.click(function () {
     card.toggleClass('card-active')
     problemWork.toggleClass('card-problem-active')
-  })
+  });
   close.click(function () {
     card.toggleClass('card-active')
     cardProblem.removeClass('card-problem-active')
-
-  })
+  });
 })
 });
