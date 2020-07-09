@@ -23,9 +23,11 @@
 /* Подключение шрифтов */
 h1,h2 {
   font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
+  color: #42485A;
 }
 p, a, h3, li, span {
   font-family: 'Segoe UI Regular', Tahoma, Geneva, Verdana, sans-serif;
+  color: #42485A;
 }
 
 html {
@@ -37,22 +39,18 @@ html {
 
 h1 {
   font-size: 20px;
-  color: #42485A;
   margin-bottom: 6px;
 }
 h2 {
   font-size: 18px;
-  color: #42485A;
   margin-bottom: 10px;
 }
 h3 {
   font-size: 14px;
-  color: #42485A;
   font-weight: 300;
 }
 p {
-  font-size: 13px;
-  color: #42485A;
+  font-size: 14px;
   margin-bottom: 13px;
 }
 ol {
@@ -61,7 +59,7 @@ ol {
   list-style-position: inside;
 }
 li {
-  font-size: 13px;
+  font-size: 14px;
 }
 * {
   outline: 0 !important;
