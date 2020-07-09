@@ -75,8 +75,9 @@ $(function() {
   var url = document.location.href;
   var shareMessages = $('.share__messages');
   var successCopy = $('.success-copy');
-  
+
   new Clipboard('.chare__ms-copy', {text: function(){ return url;}});
+  
   function shareClose() {
     share.removeClass('share-active')
     shareBg.removeClass('share-bg-active')

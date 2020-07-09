@@ -148,6 +148,7 @@
   width: 100%;
 }
 .card-problem-icon {
+  cursor: pointer;
   position: absolute;
 }
 .share-icon {
@@ -331,6 +332,9 @@
 }
 .share__ms span {
   font-size: 14px;
+}
+.share__ms-img, .ya-share2 {
+  padding-bottom: 5px;
 }
 .share__cancel {
   font-size: 15px;
