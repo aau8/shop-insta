@@ -14,20 +14,30 @@ $('.accordion-link').on('click', function(e) {
 
 $(function() {
   var family = $('#family');
-  var problem = $('.card-problem-bg')
+  var personality = $('#personality');
+  var work = $('#work');
   var close = $('.close')
   var card = $('.card')
   var cardProblem = $('.card-problem')
+  var problemFamily = $('.problem-family')
+  var problemPersonality = $('.problem-personality')
+  var problemWork = $('.problem-work')
 
   family.click(function () {
-    problem.toggleClass('card-problem-bg-active')
     card.toggleClass('card-active')
-    cardProblem.toggleClass('card-problem-active')
+    problemFamily.toggleClass('card-problem-active')
+  })
+  personality.click(function () {
+    card.toggleClass('card-active')
+    problemPersonality.toggleClass('card-problem-active')
+  })
+  work.click(function () {
+    card.toggleClass('card-active')
+    problemWork.toggleClass('card-problem-active')
   })
   close.click(function () {
-    problem.toggleClass('card-problem-bg-active')
     card.toggleClass('card-active')
-    cardProblem.toggleClass('card-problem-active')
+    cardProblem.removeClass('card-problem-active')
 
   })
 })
