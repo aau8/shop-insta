@@ -19,9 +19,9 @@ $(function() {
   var close = $('.close');
   var card = $('.card');
   var cardProblem = $('.card-problem');
-  var problemFamily = $('.problem-family');
-  var problemPersonality = $('.problem-personality');
-  var problemWork = $('.problem-work');
+  var problemFamily = $('#problem-family');
+  var problemPersonality = $('#problem-personality');
+  var problemWork = $('#problem-work');
 
   family.click(function () {
     card.toggleClass('card-active')
@@ -39,5 +39,18 @@ $(function() {
     card.toggleClass('card-active')
     cardProblem.removeClass('card-problem-active')
   });
+  // при переходе по ссылке c id карточки с проблемой открывается модальное окно
+  if (window.location.hash == "#problem-family") {
+    card.toggleClass('card-active')
+    problemFamily.toggleClass('card-problem-active')
+  }
+  if (window.location.hash == "#problem-personality") {
+    card.toggleClass('card-active')
+    problemPersonality.toggleClass('card-problem-active')
+  }
+  if (window.location.hash == "#problem-work") {
+    card.toggleClass('card-active')
+    problemWork.toggleClass('card-problem-active')
+  }
 })
 });
