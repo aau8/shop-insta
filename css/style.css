@@ -267,10 +267,14 @@
   .card, .card-problem__bottom, .sign-up {
     max-width: 320px;
   }
+  .sign-up {
+    height: 80px;
+  }
   .sign-up h2 {
     margin-left: 0;
   }
   .sign-up a {
+    padding: 10px 30px;
     margin-right: 0;
   }
 }
