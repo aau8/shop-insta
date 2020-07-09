@@ -72,5 +72,24 @@ $(function() {
     shareCard.toggleClass('share-card-active')
     body.toggleClass('body-active')
   });
-})
+  var url = document.location.href;
+  var shareMessages = $('.share__messages');
+  var successCopy = $('.success-copy');
+  
+  new Clipboard('.chare__ms-copy', {text: function(){ return url;}});
+  function shareClose() {
+    share.removeClass('share-active')
+    shareBg.removeClass('share-bg-active')
+    shareCard.removeClass('share-card-active')
+    body.removeClass('body-active')
+    shareMessages.removeClass('share__messages-active');
+    successCopy.removeClass('success-copy-active');
+  }
+  $('.chare__ms-copy').click(function(){
+    shareMessages.toggleClass('share__messages-active');
+    successCopy.toggleClass('success-copy-active');
+    setTimeout(function(){shareClose();}, 1500);
+  });
+  // конец модального окна share 
+  })
 });

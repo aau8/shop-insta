@@ -300,12 +300,29 @@
   margin-top: 18px;
   margin-bottom: 30px;
 }
+.success-copy {
+  cursor: default;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  font-size: 16px;
+  color: #41B16B;
+  opacity: 0;
+}
+.success-copy-active {
+  opacity: 1;
+}
 .share__messages {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row-gap: 20px;
   grid-column-gap: 10px;
+  opacity: 1;
+  transition: 0.3s;
+}
+.share__messages-active {
+  opacity: 0
 }
 .share__ms {
   display: flex;
@@ -314,7 +331,6 @@
 }
 .share__ms span {
   font-size: 14px;
-  padding-top: 5px;
 }
 .share__cancel {
   font-size: 15px;
@@ -328,6 +344,27 @@
 .body-active {
   overflow: hidden;
 }
+.ya-share2__item_service_vkontakte .ya-share2__icon {
+  background-image: url(../img/svg/vk-share.svg) !important; 
+}
+.ya-share2__item_service_telegram .ya-share2__icon {
+  background-image: url(../img/svg/telegram-share.svg) !important;
+}
+.ya-share2__item_service_whatsapp .ya-share2__icon {
+  background-image: url(../img/svg/watsapp-share.svg) !important;
+}
+.ya-share2__item_service_viber .ya-share2__icon {
+  background-image: url(../img/svg/viber.svg) !important;
+}
+.ya-share2__item_service_facebook .ya-share2__icon {
+  background-image: url(../img/svg/facebook.svg) !important;
+}
+.ya-share2__item_service_twitter .ya-share2__icon {
+  background-image: url(../img/svg/twitter.svg) !important; 
+}
+
+
+
 
 
 
