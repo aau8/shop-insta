@@ -8,7 +8,7 @@ $(document).ready(function() {
     $(this).next().slideToggle(500);
   }
 $('.accordion-link').on('click', function(e) {
-  // e.preventDefault;
+  e.preventDefault;
   $('.accordion-link-img').toggleClass('accordion-link-img__active');
 });
 
@@ -22,6 +22,12 @@ $(function() {
   var problemFamily = $('#problem-family');
   var problemPersonality = $('#problem-personality');
   var problemWork = $('#problem-work');
+  var shareIcon = $('.share-icon');
+  var share = $('.share');
+  var shareBg = $('.share-bg');
+  var shareCard = $('.share-card');
+  var shareCancel = $('.share__cancel');
+  var body = $('body');
 
   family.click(function () {
     card.toggleClass('card-active')
@@ -52,5 +58,19 @@ $(function() {
     card.toggleClass('card-active')
     problemWork.toggleClass('card-problem-active')
   }
+  // конец перехода по ссылке 
+  // модальное окно share
+  shareIcon.click(function () {
+    share.toggleClass('share-active')
+    shareBg.toggleClass('share-bg-active')
+    shareCard.toggleClass('share-card-active')
+    body.toggleClass('body-active')
+  });
+  shareCancel.click(function () {
+    share.toggleClass('share-active')
+    shareBg.toggleClass('share-bg-active')
+    shareCard.toggleClass('share-card-active')
+    body.toggleClass('body-active')
+  });
 })
 });

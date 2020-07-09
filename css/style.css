@@ -109,6 +109,9 @@
 
 /* Стили для карточки с проблемой */
 /* Стили для верхней части */
+.card-problems {
+  position: relative;
+}
 .card-problem {
   max-width: 360px;
   margin: auto;
@@ -147,7 +150,7 @@
 .card-problem-icon {
   position: absolute;
 }
-.share {
+.share-icon {
   top: 10px;
   left: 10px;
 }
@@ -243,8 +246,88 @@
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(231, 60, 60, 0.5);
 }
-
-
+/* Стили для Share  */
+.share {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.share-active {
+  z-index: 2;
+}
+.share-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(66, 72, 90, 0.4);
+  opacity: 0;
+  transition: 0.1s;
+}
+.share-bg-active {
+  opacity: 1;
+  transition: 0.3s;
+}
+.share-card {
+  max-width: 320px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -203px;
+  margin-left: -160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(100vh);
+  transition: 0.1s;
+}
+.share-card-active {
+  transform: translateY(0);
+  transition: 0.3s;
+}
+.share-card h2{
+  font-size: 15px;
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+.share__messages {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+}
+.share__ms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.share__ms span {
+  font-size: 14px;
+  padding-top: 5px;
+}
+.share__cancel {
+  font-size: 15px;
+  font-weight: bold;
+  color: #787D8B;
+  display: block;
+  padding: 15px 132px 15px 132px;
+  border-top: 0.8px solid #CCCCCC;
+  margin-top: 30px;
+}
+.body-active {
+  overflow: hidden;
+}
 
 
 
