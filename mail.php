@@ -52,4 +52,3 @@ if ($mail->send()) {
   // echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
   return false;
 ?>
-

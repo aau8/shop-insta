@@ -164,7 +164,7 @@
 .card-problem__bottom {
   position: relative;
   max-width: 360px;
-  margin-top: -16px;
+  margin-top: -30px;
   padding: 15px;
   border-radius: 20px 20px 5px 5px;
   background-color: #fff;
@@ -191,7 +191,7 @@
 .card-problem-list ul li::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 8px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -224,7 +224,7 @@
   margin-top: 20px;
   max-width: 360px;
   width: 100%;
-  height: 90px;
+  min-height: 90px;
   padding: 15px;
   border-radius: 10px;
   background-color: #fff;
@@ -235,14 +235,14 @@
 }
 .sign-up h2 {
   font-size: 18px;
-  margin-left: 10px;
-  margin-bottom: 0;
+  margin: 0 10px;
+  text-align: center;
 }
 .sign-up span {
   font-size: 15px;
   color: #fff;
   padding: 13px 33px;
-  margin-right: 10px;
+  margin: 0 10px;
   background-color: #E73C3C;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(231, 60, 60, 0.5);
@@ -461,14 +461,13 @@
   .card, .card-problem__bottom, .sign-up {
     max-width: 320px;
   }
-  .sign-up {
-    height: 80px;
-  }
   .sign-up h2 {
-    margin-left: 0;
+    font-size: 16px;
+    line-height: 1.1;
+    margin: 0 5px;
   }
-  .sign-up a {
+  .sign-up span {
     padding: 10px 30px;
-    margin-right: 0;
+    margin: 0 5px;
   }
 }
