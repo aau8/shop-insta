@@ -49,7 +49,7 @@ if ($mail->send()) {
       $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
   }
 
-  // Отображение результата
+  // Отображение результатаа
   // echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
   return false;
 ?>
