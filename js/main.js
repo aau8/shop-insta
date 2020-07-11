@@ -27,6 +27,11 @@ $(function() {
   var shareBg = $('.share-bg');
   var shareCard = $('.share-card');
   var shareCancel = $('.share__cancel');
+  var signUpBtn = $('.sign-up-btn');
+  var applic = $('.applic');
+  var applicBg = $('.applic-bg');
+  var applicCard = $('.applic-card');
+  var applicCancel = $('.applic-cancel-link');
   var body = $('body');
 
   family.click(function () {
@@ -76,8 +81,8 @@ $(function() {
   var shareMessages = $('.share__messages');
   var successCopy = $('.success-copy');
 
-  new Clipboard('.chare__ms-copy', {text: function(){ return url;}});
-  
+  new Clipboard('.share__ms-copy', {text: function(){ return url;}});
+
   function shareClose() {
     share.removeClass('share-active')
     shareBg.removeClass('share-bg-active')
@@ -86,11 +91,48 @@ $(function() {
     shareMessages.removeClass('share__messages-active');
     successCopy.removeClass('success-copy-active');
   }
-  $('.chare__ms-copy').click(function(){
+  $('.share__ms-copy').click(function(){
     shareMessages.toggleClass('share__messages-active');
     successCopy.toggleClass('success-copy-active');
     setTimeout(function(){shareClose();}, 1500);
   });
   // конец модального окна share 
+  // модальное окно записаться на сессию 
+  signUpBtn.click(function () {
+    applic.toggleClass('applic-active')
+    applicBg.toggleClass('applic-bg-active')
+    applicCard.toggleClass('applic-card-active')
+    body.toggleClass('body-active')
+  });
+  applicCancel.click(function () {
+    applic.toggleClass('applic-active')
+    applicBg.toggleClass('applic-bg-active')
+    applicCard.toggleClass('applic-card-active')
+    body.toggleClass('body-active')
+  });
+
+
+  // function applicClose() {
+  //   $('.applic').removeClass('applic-active')
+  //   $('.applic-bg').removeClass('applic-bg-active')
+  //   $('.applic-card').removeClass('applic-card-active')
+  //   $('body').removeClass('body-active')
+  //   $('.applic-success').removeClass('applic-success-active')
+  // }
+
+  // $('.applic__send').click(function(){
+  //   $('.applic-success').toggleClass('applic-success-active')
+  //   setTimeout(function(){applicClose();}, 1500);
+  // });
+  // конец модального окна записаться на сессию 
   })
+});
+$.ajax({
+  type: "POST",
+  url: "send.php  f",
+  data: "data",
+  dataType: "dataType",
+  success: function (response) {
+    
+  }
 });

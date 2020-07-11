@@ -25,7 +25,7 @@ h1,h2 {
   font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
   color: #42485A;
 }
-p, a, h3, li, span {
+p, a, h3, li, span, input {
   font-family: 'Segoe UI Regular', Tahoma, Geneva, Verdana, sans-serif;
   color: #42485A;
 }

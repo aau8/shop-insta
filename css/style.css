@@ -238,7 +238,7 @@
   margin-left: 10px;
   margin-bottom: 0;
 }
-.sign-up a {
+.sign-up span {
   font-size: 15px;
   color: #fff;
   padding: 13px 33px;
@@ -246,9 +246,10 @@
   background-color: #E73C3C;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(231, 60, 60, 0.5);
+  cursor: pointer;
 }
 /* Стили для Share  */
-.share {
+.share, .applic {
   width: 100%;
   height: 100%;
   display: flex;
@@ -259,10 +260,10 @@
   left: 0;
   z-index: -1;
 }
-.share-active {
+.share-active, .applic-active {
   z-index: 2;
 }
-.share-bg {
+.share-bg, .applic-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -272,11 +273,11 @@
   opacity: 0;
   transition: 0.1s;
 }
-.share-bg-active {
+.share-bg-active, .applic-bg-active {
   opacity: 1;
   transition: 0.3s;
 }
-.share-card {
+.share-card, .applic-card {
   max-width: 320px;
   width: 100%;
   background-color: #fff;
@@ -292,11 +293,11 @@
   transform: translateY(100vh);
   transition: 0.1s;
 }
-.share-card-active {
+.share-card-active, .applic-card-active {
   transform: translateY(0);
   transition: 0.3s;
 }
-.share-card h2{
+.share-card h2, .applic-card h2{
   font-size: 15px;
   margin-top: 18px;
   margin-bottom: 30px;
@@ -336,6 +337,9 @@
 .share__ms-img, .ya-share2 {
   padding-bottom: 5px;
 }
+.share__ms-copy {
+  cursor: pointer;
+}
 .share__cancel {
   font-size: 15px;
   font-weight: bold;
@@ -344,6 +348,7 @@
   padding: 15px 132px 15px 132px;
   border-top: 0.8px solid #CCCCCC;
   margin-top: 30px;
+  cursor: pointer;
 }
 .body-active {
   overflow: hidden;
@@ -366,8 +371,73 @@
 .ya-share2__item_service_twitter .ya-share2__icon {
   background-image: url(../img/svg/twitter.svg) !important; 
 }
-
-
+.applic-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.applic-form input {
+  padding: 15px;
+  width: 270px;
+  height: 40px;
+  border: 1px solid #DEDEDE;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.applic-btn {
+  width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.applic-cancel {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.applic-cancel span{
+  cursor: pointer;
+}
+.applic__send {
+  padding-bottom: 3px;
+  width: 135px;
+  height: 40px;
+  color: #fff;
+  font-family: 'Segoe UI Regular', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #E73C3C;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.applic-title-active {
+  display: none;
+}
+.applic-form-active {
+  display: none;
+}
+.applic-success {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+.applic-success-active {
+  opacity: 1;
+  z-index: 1;
+}
 
 
 

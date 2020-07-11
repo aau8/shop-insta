@@ -14,7 +14,7 @@
   <script src="js/share.js"></script>
 </head>
 <body>
-  <div class="card">
+  <div class="card" id="main-page">
     <!-- Первый блок с аватаркой, именем и способами связью -->
       <div class="profile">
         <div class="profile__info">
@@ -91,12 +91,12 @@
             <div class="card-problem-img">
               <img src="img/problem/family.webp" alt="семья">
             </div>
-            <div class="card-problem-icon share-icon">
+            <a href="#problem-family" class="card-problem-icon share-icon">
               <img src="img/svg/share.svg" alt="поделиться">
-            </div>
-            <div class="card-problem-icon close">
+            </a>
+            <a href="#main-page" class="card-problem-icon close">
               <img src="img/svg/close.svg" alt="закрыть">
-            </div>
+            </a>
           </div>
         <!-- Конец верхней части карточки -->
         <!-- Нижняя часть карточки -->
@@ -135,7 +135,7 @@
         <!-- Блок записаться  -->
         <div class="sign-up">
             <h2>1000 руб./1 час</h2>
-            <a href="#">Записаться</a>
+            <span class="sign-up-btn">Записаться</span>
         </div>
         <!-- Конец блока записаться  -->
       </div>
@@ -148,10 +148,10 @@
             <div class="card-problem-img">
               <img src="img/problem/family.webp" alt="семья">
             </div>
-            <a href="#" class="card-problem-icon share-icon">
+            <a href="#problem-personality" class="card-problem-icon share-icon">
               <img src="img/svg/share.svg" alt="поделиться">
             </a>
-            <a href="#" class="card-problem-icon close">
+            <a href="#main-page" class="card-problem-icon close">
               <img src="img/svg/close.svg" alt="закрыть">
             </a>
           </div>
@@ -192,7 +192,7 @@
         <!-- Блок записаться  -->
         <div class="sign-up">
             <h2>1000 руб./1 час</h2>
-            <a href="#">Записаться</a>
+            <span class="sign-up-btn">Записаться</span>
         </div>
         <!-- Конец блока записаться  -->
       </div>
@@ -205,10 +205,10 @@
             <div class="card-problem-img">
               <img src="img/problem/family.webp" alt="семья">
             </div>
-            <a href="#" class="card-problem-icon share-icon">
+            <a href="#problem-work" class="card-problem-icon share-icon">
               <img src="img/svg/share.svg" alt="поделиться">
             </a>
-            <a href="#" class="card-problem-icon close">
+            <a href="#main-page" class="card-problem-icon close">
               <img src="img/svg/close.svg" alt="закрыть">
             </a>
           </div>
@@ -248,12 +248,13 @@
         <!-- Блок записаться  -->
         <div class="sign-up">
             <h2>1000 руб./1 час</h2>
-            <a href="#">Записаться</a>
+            <span class="sign-up-btn">Записаться</span>
         </div>
         <!-- Конец блока записаться  -->
       </div>
       <!-- Конец карточки с проблемой по работе -->
       <!-- Конец карточек с проблемами  -->
+      <!-- модальное окно share -->
       <div class="share">
         <div class="share-bg"></div>
         <div class="share-card">
@@ -284,16 +285,42 @@
               <div class="ya-share2" data-services="twitter" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
               <span>Twitter</span>
             </a>
-            <a href="#" class="share__ms chare__ms-copy">
+            <span class="share__ms share__ms-copy">
               <div class="share__ms-img"><img src="img/svg/copy.svg" alt="copy"></div>
               <span>Copy</span>
-            </a>
+            </span>
           </div>
           <span class="success-copy">Ссылка успешно скопирована!</span>
-          <a href="#" class="share__cancel">Отмена</a>
+          <span class="share__cancel">Отмена</span>
         </div>
         <!-- конец блока с соц сетями и мессенджерами -->
       </div>
+      <!-- конец модального окна share  -->
+      <!-- модальное окно запись на сессию -->
+      <div class="applic">
+        <div class="applic-bg"></div>
+        <div class="applic-card">
+          <h2 class="applic-title">Запись на сессию</h2>
+          <!-- форма отправки -->
+          <form action="mail.php" method="POST" class="applic-form"> 
+            <div class="applic-form">
+              <input type="text" name="name" placeholder="*Имя" required>
+              <input type="tel" name="phone" placeholder="*Номер" required>
+            </div> 
+            <div class="applic-btn">
+              <div class="applic-cancel">
+                <span class="applic-cancel-link">Отмена</span>
+              </div>
+              <button class="applic__send">Отправить</button>
+            </div>
+          </form>
+          <div class="applic-success">
+            <span>Заявка отправлена!</span>
+          </div>
+        </div>
+        <!-- конец формы отправки -->
+      </div>
+      <!-- конец модального окна запись на сессию  -->
     </div>
     <div class="signature">
       <a href="http://minlab2b.ru/" target="_blank">Сделано в MinLab</a>
