@@ -127,12 +127,12 @@ $(function() {
   // конец модального окна записаться на сессию 
   })
 });
-$.ajax({
-  type: "POST",
-  url: "send.php  f",
-  data: "data",
-  dataType: "dataType",
-  success: function (response) {
+// $.ajax({
+//   type: "POST",
+//   url: "send.php  f",
+//   data: "data",
+//   dataType: "dataType",
+//   success: function (response) {
     
-  }
-});
+//   }
+// });
