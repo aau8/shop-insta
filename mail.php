@@ -41,6 +41,7 @@ $mail->Body = $body;
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {
+    echo "Заявка успешно отправлена";
   } else {$result = "error";}
 
   } catch (Exception $e) {
