@@ -111,28 +111,34 @@ $(function() {
     body.toggleClass('body-active')
   });
 
-
-  // function applicClose() {
-  //   $('.applic').removeClass('applic-active')
-  //   $('.applic-bg').removeClass('applic-bg-active')
-  //   $('.applic-card').removeClass('applic-card-active')
-  //   $('body').removeClass('body-active')
-  //   $('.applic-success').removeClass('applic-success-active')
-  // }
-
-  // $('.applic__send').click(function(){
-  //   $('.applic-success').toggleClass('applic-success-active')
-  //   setTimeout(function(){applicClose();}, 1500);
-  // });
+  // ajax запрос для записаться на сессию 
+  $('#applicForm').on('submit', function (event) {
+    event.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "telega.php",
+      data: $(this).serialize(),
+      success: 
+      function () {
+        function applicClose() {
+          $('.applic').removeClass('applic-active')
+          $('.applic-bg').removeClass('applic-bg-active')
+          $('.applic-card').removeClass('applic-card-active')
+          $('body').removeClass('body-active')
+          $('.applic-success').removeClass('applic-success-active')
+        };
+          $('.applic-success').toggleClass('applic-success-active')
+          setTimeout(function(){applicClose();}, 1500);
+          setTimeout(function(){
+            $('#applicForm')[0].reset();
+          }, 1500);
+      },
+      error: function (jqXHR, textStatus) {
+        console.error(jqXHR + " " + textStatus);
+      }
+    });
+  })
+  // конец ajax запроса для записаться на сессию 
   // конец модального окна записаться на сессию 
   })
 });
-// $.ajax({
-//   type: "POST",
-//   url: "send.php  f",
-//   data: "data",
-//   dataType: "dataType",
-//   success: function (response) {
-    
-//   }
-// });
