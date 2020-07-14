@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Анна Другуцан - Акмеолог</title>
+  <title>Анна Драгуцан - Акмеолог</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <script src="js/ajax.js"></script>
   <script src="js/main.js"></script>
   <script src="js/share.js"></script>
 </head>
 <body>
+  <!-- "Главный экран" -->
   <div class="card" id="main-page">
     <!-- Первый блок с аватаркой, именем и способами связью -->
       <div class="profile">
@@ -80,250 +82,247 @@
         </div>
       </div>
       <!-- Конец второго блока -->
+  </div>
+  <!-- Конец "Главный экран" -->
+  <!-- "Семейные проблемы" -->
+  <div class="card-problem" id="problem-family">
+    <!-- <div class="card-problem__content"> -->
+    <!-- Верхняя часть карточки -->
+      <div class="card-problem__top">
+        <div class="card-problem-img">
+          <img src="img/problem/family.webp" alt="семья">
+        </div>
+        <a href="#problem-family" class="card-problem-icon share-icon">
+          <img src="img/svg/share.svg" alt="поделиться">
+        </a>
+        <a href="#main-page" class="card-problem-icon close">
+          <img src="img/svg/close.svg" alt="закрыть">
+        </a>
+      </div>
+    <!-- Конец верхней части карточки -->
+    <!-- Нижняя часть карточки -->
+      <div class="card-problem__bottom">
+        <h2>Семейные проблемы</h2>
+        <p>Идеальных семей не существует. Как не печально, но в каждой семье есть проблемы. У кого-то их больше, у кого-то меньше. Главная проблема в том, что большинство обращает на них внимание только тогда, когда они начинают давать свои плоды. После чего следует либо развод, либо бесконечные сеансы у психолога, либо вы просто впадаете в депрессию.</p>
+        <div class="card-problem-list">
+          <ul>
+            <li>непонимание</li>
+            <li>потеря влечения</li>
+            <li>потеря желаний</li>
+            <li>на грани развода</li>
+            <li>ступор в отношениях</li>
+            <li>безразличие</li>
+            <li>проблемы с родителями</li>
+            <li>проблемы с ребенком</li>
+            <li>проблемы с родителями</li>
+            <li>проблемы с ребенком</li>
+          </ul>
+        </div>
+        <p>Всего за 1 час я помогу вам решить подобные проблемы на этапе их зарождения. </p>
+        <div id="accordion">
+          <div class="accordion-link">
+            <span>Как проходит сессия?</span>
+            <div class="accordion-link-img">
+              <img src="img/svg/session-more.svg" alt="more">
+            </div>
+          </div>
+          <div class="acc-content">
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+    <!-- Конец нижней части карточки -->
+    <!-- </div> -->
+    <!-- Блок записаться  -->
+    <div class="sign-up">
+        <h2>1000 руб. - 1 час</h2>
+        <span class="sign-up-btn">Записаться</span>
     </div>
-    <!-- Карточки с проблемами  -->
-    <!-- Карточка с семейными проблемами -->
-    <div class="card-problems">
-      <div class="card-problem" id="problem-family">
-        <!-- <div class="card-problem__content"> -->
-        <!-- Верхняя часть карточки -->
-          <div class="card-problem__top">
-            <div class="card-problem-img">
-              <img src="img/problem/family.webp" alt="семья">
-            </div>
-            <a href="#problem-family" class="card-problem-icon share-icon">
-              <img src="img/svg/share.svg" alt="поделиться">
-            </a>
-            <a href="#main-page" class="card-problem-icon close">
-              <img src="img/svg/close.svg" alt="закрыть">
-            </a>
-          </div>
-        <!-- Конец верхней части карточки -->
-        <!-- Нижняя часть карточки -->
-          <div class="card-problem__bottom">
-            <h2>Семейные проблемы</h2>
-            <p>Идеальных семей не существует. Как не печально, но в каждой семье есть проблемы. У кого-то их больше, у кого-то меньше. Главная проблема в том, что большинство обращает на них внимание только тогда, когда они начинают давать свои плоды. После чего следует либо развод, либо бесконечные сеансы у психолога, либо вы просто впадаете в депрессию.</p>
-            <div class="card-problem-list">
-              <ul>
-                <li>непонимание</li>
-                <li>потеря влечения</li>
-                <li>потеря желаний</li>
-                <li>на грани развода</li>
-                <li>ступор в отношениях</li>
-                <li>безразличие</li>
-                <li>проблемы с родителями</li>
-                <li>проблемы с ребенком</li>
-                <li>проблемы с родителями</li>
-                <li>проблемы с ребенком</li>
-              </ul>
-            </div>
-            <p>Всего за 1 час я помогу вам решить подобные проблемы на этапе их зарождения. </p>
-            <div id="accordion">
-              <div class="accordion-link">
-                <span>Как проходит сессия?</span>
-                <div class="accordion-link-img">
-                  <img src="img/svg/session-more.svg" alt="more">
-                </div>
-              </div>
-              <div class="acc-content">
-                <p>Text</p>
-              </div>
-            </div>
-          </div>
-        <!-- Конец нижней части карточки -->
-        <!-- </div> -->
-        <!-- Блок записаться  -->
-        <div class="sign-up">
-            <h2>1000 руб. - 1 час</h2>
-            <span class="sign-up-btn">Записаться</span>
+    <!-- Конец блока записаться  -->
+  </div>
+  <!-- Конец "Семейные проблемы" -->
+  <!-- "Личные проблемы" -->
+  <div class="card-problem" id="problem-personality">
+    <!-- <div class="card-problem__content"> -->
+    <!-- Верхняя часть карточки -->
+      <div class="card-problem__top">
+        <div class="card-problem-img">
+          <img src="img/problem/family.webp" alt="семья">
         </div>
-        <!-- Конец блока записаться  -->
+        <a href="#problem-personality" class="card-problem-icon share-icon">
+          <img src="img/svg/share.svg" alt="поделиться">
+        </a>
+        <a href="#main-page" class="card-problem-icon close">
+          <img src="img/svg/close.svg" alt="закрыть">
+        </a>
       </div>
-      <!-- Конец карточки с семейными проблемами -->
-      <!-- Карточка с личными проблемами -->
-      <div class="card-problem" id="problem-personality">
-        <!-- <div class="card-problem__content"> -->
-        <!-- Верхняя часть карточки -->
-          <div class="card-problem__top">
-            <div class="card-problem-img">
-              <img src="img/problem/family.webp" alt="семья">
-            </div>
-            <a href="#problem-personality" class="card-problem-icon share-icon">
-              <img src="img/svg/share.svg" alt="поделиться">
-            </a>
-            <a href="#main-page" class="card-problem-icon close">
-              <img src="img/svg/close.svg" alt="закрыть">
-            </a>
-          </div>
-        <!-- Конец верхней части карточки -->
-        <!-- Нижняя часть карточки -->
-          <div class="card-problem__bottom">
-            <h2>Личные проблемы</h2>
-            <p>Идеальных семей не существует. Как не печально, но в каждой семье есть проблемы. У кого-то их больше, у кого-то меньше. Главная проблема в том, что большинство обращает на них внимание только тогда, когда они начинают давать свои плоды. После чего следует либо развод, либо бесконечные сеансы у психолога, либо вы просто впадаете в депрессию.</p>
-            <div class="card-problem-list">
-              <ul>
-                <li>непонимание</li>
-                <li>потеря влечения</li>
-                <li>потеря желаний</li>
-                <li>на грани развода</li>
-                <li>ступор в отношениях</li>
-                <li>безразличие</li>
-                <li>проблемы с родителями</li>
-                <li>проблемы с ребенком</li>
-                <li>проблемы с родителями</li>
-                <li>проблемы с ребенком</li>
-              </ul>
-            </div>
-            <p>Всего за 1 час я помогу вам решить подобные проблемы на этапе их зарождения. </p>
-            <div id="accordion">
-              <div class="accordion-link">
-                <span>Как проходит сессия?</span>
-                <div class="accordion-link-img">
-                  <img src="img/svg/session-more.svg" alt="more">
-                </div>
-              </div>
-              <div class="acc-content">
-                <p>Text</p>
-              </div>
-            </div>
-          </div>
-        <!-- Конец нижней части карточки -->
-        <!-- </div> -->
-        <!-- Блок записаться  -->
-        <div class="sign-up">
-            <h2>1000 руб. - 1 час</h2> 
-            <span class="sign-up-btn">Записаться</span>
+    <!-- Конец верхней части карточки -->
+    <!-- Нижняя часть карточки -->
+      <div class="card-problem__bottom">
+        <h2>Личные проблемы</h2>
+        <p>Идеальных семей не существует. Как не печально, но в каждой семье есть проблемы. У кого-то их больше, у кого-то меньше. Главная проблема в том, что большинство обращает на них внимание только тогда, когда они начинают давать свои плоды. После чего следует либо развод, либо бесконечные сеансы у психолога, либо вы просто впадаете в депрессию.</p>
+        <div class="card-problem-list">
+          <ul>
+            <li>непонимание</li>
+            <li>потеря влечения</li>
+            <li>потеря желаний</li>
+            <li>на грани развода</li>
+            <li>ступор в отношениях</li>
+            <li>безразличие</li>
+            <li>проблемы с родителями</li>
+            <li>проблемы с ребенком</li>
+            <li>проблемы с родителями</li>
+            <li>проблемы с ребенком</li>
+          </ul>
         </div>
-        <!-- Конец блока записаться  -->
-      </div>
-      <!-- Конец карточки с личными проблемами -->
-      <!-- Карточка с проблемой по работе -->
-      <div class="card-problem" id="problem-work">
-        <!-- <div class="card-problem__content"> -->
-        <!-- Верхняя часть карточки -->
-          <div class="card-problem__top">
-            <div class="card-problem-img">
-              <img src="img/problem/family.webp" alt="семья">
-            </div>
-            <a href="#problem-work" class="card-problem-icon share-icon">
-              <img src="img/svg/share.svg" alt="поделиться">
-            </a>
-            <a href="#main-page" class="card-problem-icon close">
-              <img src="img/svg/close.svg" alt="закрыть">
-            </a>
-          </div>
-        <!-- Конец верхней части карточки -->
-        <!-- Нижняя часть карточки -->
-          <div class="card-problem__bottom">
-            <h2>Проблемы на работе</h2>
-            <p>Идеальных семей не существует. Как не печально, но в каждой семье есть проблемы. У кого-то их больше, у кого-то меньше. Главная проблема в том, что большинство обращает на них внимание только тогда, когда они начинают давать свои плоды. После чего следует либо развод, либо бесконечные сеансы у психолога, либо вы просто впадаете в депрессию.</p>
-            <div class="card-problem-list">
-              <ul>
-                <li>непонимание</li>
-                <li>потеря влечения</li>
-                <li>потеря желаний</li>
-                <li>на грани развода</li>
-                <li>ступор в отношениях</li>
-                <li>безразличие</li>
-                <li>проблемы с родителями</li>
-                <li>проблемы с ребенком</li>
-                <li>проблемы с родителями</li>
-              </ul>
-            </div>
-            <p>Всего за 1 час я помогу вам решить подобные проблемы на этапе их зарождения. </p>
-            <div id="accordion">
-              <div class="accordion-link">
-                <span>Как проходит сессия?</span>
-                <div class="accordion-link-img">
-                  <img src="img/svg/session-more.svg" alt="more">
-                </div>
-              </div>
-              <div class="acc-content">
-                <p>Text</p>
-              </div>
+        <p>Всего за 1 час я помогу вам решить подобные проблемы на этапе их зарождения. </p>
+        <div id="accordion">
+          <div class="accordion-link">
+            <span>Как проходит сессия?</span>
+            <div class="accordion-link-img">
+              <img src="img/svg/session-more.svg" alt="more">
             </div>
           </div>
-        <!-- Конец нижней части карточки -->
-        <!-- </div> -->
-        <!-- Блок записаться  -->
-        <div class="sign-up">
-            <h2>1000 руб. - 1 час</h2>
-            <span class="sign-up-btn">Записаться</span>
-        </div>
-        <!-- Конец блока записаться  -->
-      </div>
-      <!-- Конец карточки с проблемой по работе -->
-      <!-- Конец карточек с проблемами  -->
-      <!-- модальное окно share -->
-      <div class="share">
-        <div class="share-bg"></div>
-        <div class="share-card">
-          <h2>Способ отправки</h2>
-          <!-- блок с соц сетями и мессенджерами -->
-          <div class="share__messages">
-            <a href="#" class="share__ms">
-              <div class="ya-share2" data-services="vkontakte" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
-              <span>VK</span>
-            </a>
-            <a href="#" class="share__ms">
-              <div class="ya-share2" data-services="telegram" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
-              <span>Telegram</span>
-            </a>
-            <a href="#" class="share__ms">
-              <div class="ya-share2" data-services="whatsapp" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
-              <span>Whatsapp</span>
-            </a>
-            <a href="#" class="share__ms">
-              <div class="ya-share2" data-services="viber" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
-              <span>Viber</span>
-            </a>
-            <a href="#" class="share__ms">
-              <div class="ya-share2" data-services="facebook" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
-              <span>Facebook</span>
-            </a>
-            <a href="#" class="share__ms">
-              <div class="ya-share2" data-services="twitter" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
-              <span>Twitter</span>
-            </a>
-            <span class="share__ms share__ms-copy" style="display: none;">
-              <div class="share__ms-img"><img src="img/svg/copy.svg" alt="copy"></div>
-              <span>Copy</span>
-            </span>
-          </div>
-          <span class="success-copy">Ссылка успешно скопирована!</span>
-          <span class="share__cancel">Отмена</span>
-        </div>
-        <!-- конец блока с соц сетями и мессенджерами -->
-      </div>
-      <!-- конец модального окна share  -->
-      <!-- модальное окно запись на сессию -->
-      <div class="applic">
-        <div class="applic-bg"></div>
-        <div class="applic-card">
-          <h2 class="applic-title">Запись на сессию</h2>
-          <!-- форма отправки -->
-          <form action="telega.php" method="POST" class="applic-form" id="applicForm"> 
-            <div class="applic-form">
-              <input type="text" name="name" placeholder="*Имя" required>
-              <input type="tel" name="phone" placeholder="*Номер" required>
-            </div> 
-            <div class="applic-btn">
-              <div class="applic-cancel">
-                <span class="applic-cancel-link">Отмена</span>
-              </div>
-              <button class="applic__send">Отправить</button>
-            </div>
-          </form>
-          <div class="applic-success">
-            <span>Заявка отправлена!</span>
+          <div class="acc-content">
+            <p>Text</p>
           </div>
         </div>
-        <!-- конец формы отправки -->
       </div>
-      <!-- конец модального окна запись на сессию  -->
+    <!-- Конец нижней части карточки -->
+    <!-- </div> -->
+    <!-- Блок записаться  -->
+    <div class="sign-up">
+        <h2>1000 руб. - 1 час</h2> 
+        <span class="sign-up-btn">Записаться</span>
     </div>
-    <div class="signature">
-      <a href="http://minlab2b.ru/" target="_blank">Сделано в MinLab</a>
+    <!-- Конец блока записаться  -->
+  </div>
+  <!-- Конец "Личные проблемы" -->
+  <!-- "Проблемы на работе" -->
+  <div class="card-problem" id="problem-work">
+    <!-- <div class="card-problem__content"> -->
+    <!-- Верхняя часть карточки -->
+      <div class="card-problem__top">
+        <div class="card-problem-img">
+          <img src="img/problem/family.webp" alt="семья">
+        </div>
+        <a href="#problem-work" class="card-problem-icon share-icon">
+          <img src="img/svg/share.svg" alt="поделиться">
+        </a>
+        <a href="#main-page" class="card-problem-icon close">
+          <img src="img/svg/close.svg" alt="закрыть">
+        </a>
+      </div>
+    <!-- Конец верхней части карточки -->
+    <!-- Нижняя часть карточки -->
+      <div class="card-problem__bottom">
+        <h2>Проблемы на работе</h2>
+        <p>Идеальных семей не существует. Как не печально, но в каждой семье есть проблемы. У кого-то их больше, у кого-то меньше. Главная проблема в том, что большинство обращает на них внимание только тогда, когда они начинают давать свои плоды. После чего следует либо развод, либо бесконечные сеансы у психолога, либо вы просто впадаете в депрессию.</p>
+        <div class="card-problem-list">
+          <ul>
+            <li>непонимание</li>
+            <li>потеря влечения</li>
+            <li>потеря желаний</li>
+            <li>на грани развода</li>
+            <li>ступор в отношениях</li>
+            <li>безразличие</li>
+            <li>проблемы с родителями</li>
+            <li>проблемы с ребенком</li>
+            <li>проблемы с родителями</li>
+          </ul>
+        </div>
+        <p>Всего за 1 час я помогу вам решить подобные проблемы на этапе их зарождения. </p>
+        <div id="accordion">
+          <div class="accordion-link">
+            <span>Как проходит сессия?</span>
+            <div class="accordion-link-img">
+              <img src="img/svg/session-more.svg" alt="more">
+            </div>
+          </div>
+          <div class="acc-content">
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+    <!-- Конец нижней части карточки -->
+    <!-- </div> -->
+    <!-- Блок записаться  -->
+    <div class="sign-up">
+        <h2>1000 руб. - 1 час</h2>
+        <span class="sign-up-btn">Записаться</span>
     </div>
+    <!-- Конец блока записаться  -->
+  </div>
+  <!-- Конец "Проблемы на работе" -->
+  <!-- "Share" -->
+  <div class="share">
+    <div class="share-bg"></div>
+    <div class="share-card">
+      <h2>Способ отправки</h2>
+      <!-- блок с соц сетями и мессенджерами -->
+      <div class="share__messages">
+        <a href="#" class="share__ms">
+          <div class="ya-share2" data-services="vkontakte" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
+          <span>VK</span>
+        </a>
+        <a href="#" class="share__ms">
+          <div class="ya-share2" data-services="telegram" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
+          <span>Telegram</span>
+        </a>
+        <a href="#" class="share__ms">
+          <div class="ya-share2" data-services="whatsapp" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
+          <span>Whatsapp</span>
+        </a>
+        <a href="#" class="share__ms">
+          <div class="ya-share2" data-services="viber" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
+          <span>Viber</span>
+        </a>
+        <a href="#" class="share__ms">
+          <div class="ya-share2" data-services="facebook" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
+          <span>Facebook</span>
+        </a>
+        <a href="#" class="share__ms">
+          <div class="ya-share2" data-services="twitter" data-image="https://artemyg0811.github.io/shop-insta/img/problem/family.webp" data-title="Помощь в решении проблем в семейных отношениях" data-description="Помощь в решении проблем в семейных отношениях" data-url="https://artemyg0811.github.io/shop-insta/#problem-family"></div>
+          <span>Twitter</span>
+        </a>
+        <span class="share__ms share__ms-copy" style="display: none;">
+          <div class="share__ms-img"><img src="img/svg/copy.svg" alt="copy"></div>
+          <span>Copy</span>
+        </span>
+      </div>
+      <span class="success-copy">Ссылка успешно скопирована!</span>
+      <span class="share__cancel">Отмена</span>
+    </div>
+    <!-- конец блока с соц сетями и мессенджерами -->
+  </div>
+  <!-- Конец "Share"  -->
+  <!-- "Запись на сессию" -->
+  <div class="applic">
+    <div class="applic-bg"></div>
+    <div class="applic-card">
+      <h2 class="applic-title">Запись на сессию</h2>
+      <!-- форма отправки -->
+      <form action="mail.php" method="POST" class="applic-form" id="applicForm"> 
+        <div class="applic-form">
+          <input type="text" name="name" placeholder="*Имя" id="name" required>
+          <input type="tel" name="phone" placeholder="*Номер" id="phone" required>
+        </div> 
+        <div class="applic-btn">
+          <div class="applic-cancel">
+            <span class="applic-cancel-link">Отмена</span>
+          </div>
+          <button class="applic__send">Отправить</button>
+        </div>
+      </form>
+      <div class="applic-success">
+        <span>Заявка отправлена!</span>
+      </div>
+    </div>
+    <!-- конец формы отправки -->
+  </div>
+  <!-- Конец "Запись на сессию"  -->
+  <div class="signature">
+    <a href="http://minlab2b.ru/" target="_blank">Сделано в MinLab</a>
+  </div>
 </body>
 </html>
